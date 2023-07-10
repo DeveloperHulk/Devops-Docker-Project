@@ -6,11 +6,11 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip
 
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page292/honey.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page292/yogast.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip honey.zip
-RUN cp -rvf honey-html/* .
-RUN rm -rf honey.zip
+RUN unzip yogast.zip
+RUN cp -rvf yogast-html/* .
+RUN rm -rf yogast.zip
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
