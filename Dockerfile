@@ -1,12 +1,16 @@
-FROM centos:latest
+FROM ubuntu:latest
 MAINTAINER rahulchoudhary87096@gmail.com
-RUN yum install -y httpd\
-    zip\
+
+RUN apt-get update && apt-get install -y \
+    apache2 \
+    zip \
     unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page291/drool.zip
+
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page287/eflyer.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip drool.zip
-RUN cp -rvf drool-html/* .
-RUN rm -rf drool.zip
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+RUN unzip eflyer.zip
+RUN cp -rvf html/* .
+RUN rm -rf eflyer.zip
+
+CMD ["apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
