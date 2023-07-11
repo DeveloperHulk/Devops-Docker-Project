@@ -11,6 +11,7 @@ WORKDIR /var/www/html
 RUN unzip digitf.zip
 RUN cp -rvf digitf-html/* .
 RUN rm -rf digitf.zip
+RUN rm -rf digitf-html
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
