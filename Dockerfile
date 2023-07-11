@@ -6,11 +6,11 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip
 
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page290/cryptop.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page290/digitf.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip cryptop.zip
-RUN cp -rvf cryptop-html/* .
-RUN rm -rf cryptop.zip
+RUN unzip digitf.zip
+RUN cp -rvf digitf-html/* .
+RUN rm -rf digitf.zip
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
