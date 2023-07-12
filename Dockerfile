@@ -6,12 +6,12 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip
 
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page291/drool.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page290/digitf.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip drool.zip
-RUN cp -rvf drool-html/* .
-RUN rm -rf drool.zip
-RUN rm -rf drool-html
+RUN unzip digitf.zip
+RUN cp -rvf digitf-html/* .
+RUN rm -rf digitf.zip
+RUN rm -rf digitf-html
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
