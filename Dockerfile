@@ -6,12 +6,12 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip
 
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page289/seotech.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page291/drool.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip seotech.zip
-RUN cp -rvf seotech-html/* .
-RUN rm -rf seotech.zip
-RUN rm -rf seotech-html
+RUN unzip drool.zip
+RUN cp -rvf drool-html/* .
+RUN rm -rf drool.zip
+RUN rm -rf drool-html
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
