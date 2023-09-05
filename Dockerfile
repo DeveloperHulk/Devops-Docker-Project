@@ -3,7 +3,7 @@ MAINTAINER rahulchoudhary87096@gmail.com
 
 RUN apt-get update && apt-get install -y \
     apache2 \
-    zip \
+    zip \ 
     unzip
 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page290/digitf.zip /var/www/html/
